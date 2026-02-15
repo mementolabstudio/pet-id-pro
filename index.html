@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Protocolo de Recuperación | Pet-ID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loader" class="loader-container">
+        <i class="fa-solid fa-paw fa-bounce text-accent" style="font-size: 3rem;"></i>
+    </div>
+
+    <div id="app-container" class="phone-container hidden">
+        
+        <header class="hero">
+            <img id="pet-img" src="" alt="Foto de la Mascota" class="hero-img">
+            <div class="emergency-badge">
+                <i class="fa-solid fa-triangle-exclamation"></i> EXTRAVIADO
+            </div>
+        </header>
+
+        <main class="content">
+            <div class="identity-card glass-panel">
+                <h1 id="pet-name">Cargando...</h1>
+                <p class="breed-badge"><i class="fa-solid fa-tag"></i> <span id="pet-breed">...</span></p>
+                
+                <div class="physical-grid">
+                    <div class="grid-stat">
+                        <i class="fa-solid fa-palette"></i>
+                        <span id="pet-color">-</span>
+                    </div>
+                    <div class="grid-stat">
+                        <i class="fa-solid fa-ruler"></i>
+                        <span id="pet-size">-</span>
+                    </div>
+                    <div class="grid-stat">
+                        <i class="fa-solid fa-weight-hanging"></i>
+                        <span id="pet-weight">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <section class="info-section mt-4">
+                <h2 class="section-title"><i class="fa-solid fa-microchip"></i> Identificación</h2>
+                <div class="data-panel">
+                    <p class="data-label">MICROCHIP ID</p>
+                    <p class="data-value" id="pet-chip">Sin registro</p>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2 class="section-title text-danger"><i class="fa-solid fa-notes-medical"></i> Salud y Cuidados</h2>
+                <div class="data-panel border-danger bg-danger-light">
+                    <p class="data-value text-danger" id="pet-health">Sin notas médicas.</p>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2 class="section-title"><i class="fa-solid fa-location-dot"></i> Punto de Retorno</h2>
+                <div class="data-panel">
+                    <p class="data-label">DOMICILIO / ZONA</p>
+                    <p class="data-value" id="pet-location">Cargando...</p>
+                    <a id="btn-maps" href="#" target="_blank" class="btn btn-outline mt-2">
+                        <i class="fa-solid fa-map-location-dot"></i> Abrir en Google Maps
+                    </a>
+                </div>
+            </section>
+            
+            <div class="spacer"></div>
+        </main>
+
+        <footer class="action-bar glass-panel">
+            <div class="btn-group">
+                <a id="btn-call" href="#" class="btn btn-primary">
+                    <i class="fa-solid fa-phone"></i> Llamar
+                </a>
+                <a id="btn-wa" href="#" target="_blank" class="btn btn-success">
+                    <i class="fa-brands fa-whatsapp"></i> Mensaje
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <div id="error-screen" class="hidden text-center" style="padding: 50px;">
+        <i class="fa-solid fa-circle-exclamation text-danger" style="font-size: 4rem; margin-bottom: 20px;"></i>
+        <h2>Perfil no encontrado</h2>
+        <p style="color: #64748b; margin-top: 10px;">El identificador de esta mascota no es válido o ha sido dado de baja.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
